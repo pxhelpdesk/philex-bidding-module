@@ -13,6 +13,15 @@
 
 ## 📝 Changelog
 
+### 📦 Version: `0.0.1b-pre-alpha`
+📅 **Date:** July 2, 2025  
+🔗 **Commit:** `fef13c2d2d515537f295424cb544648759266de5`
+
+#### ✨ Changes
+- 📝 Added `README.md` file with project information
+
+---
+
 ### 📦 Version: `0.0.1a-pre-alpha`
 📅 **Date:** July 2, 2025  
 🔗 **Commit:** `f57804d8bd29b2a5c95ef8f463e4b404b875a5db`

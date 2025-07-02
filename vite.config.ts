@@ -22,4 +22,13 @@ export default defineConfig({
             'ziggy-js': resolve(__dirname, 'vendor/tightenco/ziggy'),
         },
     },
+    server: {
+        host:'172.17.1.237',
+        port:4101,
+        cors:true,
+        // https: {
+        //     key: fs.readFileSync('crt/pmc-website.local/www.philexmining.com.ph.key'),
+        //     cert: fs.readFileSync('crt/pmc-website.local/CEPO250219726679.cer'),
+        //},
+    },
 });

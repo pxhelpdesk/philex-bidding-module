@@ -17,7 +17,7 @@
 📅 **Date:** July 2, 2025  
 
 #### ✨ Changes
-- 📝 Added `README.md` file with project information _ 1
+- ⚙️ Updated `.env.example` file with revised environment variables
 
 ---
 

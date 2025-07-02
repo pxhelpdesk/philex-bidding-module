@@ -1,6 +1,6 @@
 # 📦 Philex - Bidding Module
 
-## 📌 Current Phase
+## 📌 Current Migration Phase
 
 | Phase       | Date Started | Notes                         |
 |-------------|--------------|-------------------------------|
@@ -12,6 +12,20 @@
 ---
 
 ## 📝 Changelog
+
+# 🚀 Version: `0.1.0-pre-alpha`
+📅 **Date:** July 2, 2025  
+
+## 📄 Description
+- 📄 Added bidding pages and controller  
+- 🧭 Added dashboard page  
+- 👥 Added `UsersLayout` component  
+- 📦 Installed: `framer-motion/dom`, `react-icons`, `react-toastify`  
+- 🛠️ Updated database connections (MySQL & SQL Server)  
+- 🌐 Updated web routes for bidding  
+- 🧹 Removed old user-related migrations 
+
+---
 
 ### 📦 Version: `0.0.2-pre-alpha`
 📅 **Date:** July 2, 2025  

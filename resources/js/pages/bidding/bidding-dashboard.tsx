@@ -1,8 +1,16 @@
+import UsersLayout from '@/layouts/users-layout'
+import { Head } from '@inertiajs/react'
 import React from 'react'
 
 const BiddingDashboard = () => {
     return (
-      <div>bidding-dashboard</div>
+       <>
+            <Head title='Bidding - Dashboard '/>
+
+            <UsersLayout>
+              Reports
+            </UsersLayout>
+        </>
     )
 }
 

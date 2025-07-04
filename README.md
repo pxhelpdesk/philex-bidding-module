@@ -13,6 +13,18 @@
 
 ## 📝 Changelog
 
+# 🚀 Version: `0.1.1-pre-alpha`
+📅 **Date:** July 4, 2025  
+
+## 📄 Description
+- 🎨 Added CSS styles for DataTables  
+- 📄 Added "Bidding All List" page  
+- 🖼️ Added Philex logo to sidebar  
+- 🧩 Updated `app.css` content  
+- 🌐 Updated web routes for dashboard and all list pages  
+
+---
+
 # 🚀 Version: `0.1.0-pre-alpha`
 📅 **Date:** July 2, 2025  
 

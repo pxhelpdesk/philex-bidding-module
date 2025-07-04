@@ -156,4 +156,52 @@
     body {
         @apply bg-background text-foreground;
     }
+
+    .icon-color{
+        @apply text-slate-700;
+    }
+
+    .text-color-selections{
+        @apply text-slate-700
+    }
+}
+
+@layer components {
+
+    /* Table Components */
+    .th-header-class{
+        @apply py-2 px-6 text-gray-600 border border-zinc-200/50 bg-gray-50 text-xs font-bold uppercase tracking-wider;
+    }
+
+    .td-cell-border-class{
+        @apply border border-zinc-200/70 bg-gray-50 text-left text-sm;
+    }
+
+    /* Form Components */
+    /* Global */
+    .form-submit-btn-class{
+        @apply bg-green-700 hover:bg-green-600 transition-colors text-white px-6 text-sm py-1 rounded cursor-pointer;
+    }
+    /* Employee */
+    .input-field-employee-class{
+        @apply border rounded-xs h-8 border-gray-300 w-full p-1 text-sm text-slate-700 disabled:bg-slate-200/80 disabled:cursor-not-allowed;
+    }
+
+    .label-employee-class{
+        @apply font-bold text-gray-600;
+    }
+
+    .button-back-with-icon-class{
+        @apply flex gap-1 items-center cursor-pointer hover:text-yellow-700 w-20 my-2;
+    }
+
+    /* Roles */
+    .input-field-role-class{
+        @apply border rounded-xs h-8 border-gray-300 w-full p-1 text-sm text-slate-700;
+    }
+
+    .input-checkbox-role-class{
+        @apply border rounded-xs h-6 w-6 m-1 border-gray-300 p-2 text-sm text-slate-700;
+    }
+
 }

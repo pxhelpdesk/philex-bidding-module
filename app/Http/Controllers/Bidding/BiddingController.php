@@ -15,15 +15,22 @@ class BiddingController extends Controller
      */
     public function dashboard()
     {
-        //
 
-
-
-
-        return Inertia::render('bidding/dashboard', [
+        return Inertia::render('bidding/bidding-dashboard', [
             'role_permission_lists' => "test"
         ]);
 
+    }
+
+    /**
+     * Display a listing of the resource.
+     */
+    public function alllist()
+    {
+
+        return Inertia::render('bidding/bidding-all-list.tsx', [
+            'role_permission_lists' => "test"
+        ]);
 
     }
 

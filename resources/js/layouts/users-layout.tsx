@@ -9,10 +9,14 @@ import '../../css/datatable-app.css';
 // Components
 import { Link, usePage } from '@inertiajs/react';
 import { toast, ToastContainer } from 'react-toastify';
+
 // Icons
 import { IoPieChartSharp } from "react-icons/io5";
-import { FaHome, FaSignOutAlt, FaRegCheckCircle, FaRegCheckSquare, FaUserCircle, FaCodeBranch } from "react-icons/fa";
+import { FaHome, FaSignOutAlt, FaRegCheckCircle, FaRegCheckSquare, FaList, FaUserCircle, FaCodeBranch } from "react-icons/fa";
+import { PiSquaresFourFill } from "react-icons/pi";
+
 import { LuUser } from "react-icons/lu";
+import { RiAuctionFill } from "react-icons/ri";
 import { TbLayoutList } from "react-icons/tb";
 import { IoIosNotifications } from "react-icons/io";
 import { GrHide } from "react-icons/gr";
@@ -276,18 +280,28 @@ export default function UsersLayout({ children }: PropsWithChildren) {
                     <ul className="space-y-2 font-medium">
                         <hr className='bg-slate-300 border-0 h-[1px]' />
 
-                        {/* Home Tab */}
+                        {/* Dashboard Module Tab */}
                         <li>
                             {/* href="https://portal.silanganmining.com.ph" */}
                             <a href="http://172.17.1.237:4010/dashboard-modules" className="flex items-center px-2 py-1 rounded-xs hover:bg-slate-200/50  transition-colors group">
-                                <FaHome className='size-5 icon-color' />
-                                {!collapsed && <span className="ml-3 text-sm py-1 text-color-selections">Dashboard</span>}
+                                <PiSquaresFourFill className='size-5 icon-color' />
+                                {!collapsed && <span className="ml-3 text-sm py-1 text-color-selections">Modules</span>}
                             </a>
                         </li>
 
                         <hr className='bg-slate-300 border-0 h-[1px] ' />
 
-                        {/* Users Tab */}
+                        {/* Bid Event Tab */}
+
+                        <li>
+                    
+                            <Link href={route("bidding.dashboard")} className="flex items-center px-2 py-1 rounded-xs hover:bg-slate-200/50  transition-colors group">
+                                <FaHome className='size-5 icon-color' />
+                                {!collapsed && <span className="ml-3 text-sm py-1 text-color-selections">Dashboard</span>}
+                            </Link>
+                            
+                        </li>
+
                         <li>
                             <button
                                 type="button"
@@ -296,11 +310,11 @@ export default function UsersLayout({ children }: PropsWithChildren) {
                                 aria-controls="dropdown-example"
                                 aria-expanded={isOpen}
                             >
-                                <FaUsers className="size-5 icon-color" />
+                                <RiAuctionFill className="size-5 icon-color" />
 
                                 {!collapsed && (
                                     <>
-                                        <span className="flex-1 ms-3 text-left text-sm rtl:text-right whitespace-nowrap text-color-selections">Users Configuration</span>
+                                        <span className="flex-1 ms-3 text-left text-sm rtl:text-right whitespace-nowrap text-color-selections">Bid Events</span>
                                         <svg
                                             className={`w-2.5 h-2.5 transform transition-transform duration-300 mr-2 ${isOpen ? "rotate-180" : ""}`}
                                             aria-hidden="true"
@@ -327,21 +341,21 @@ export default function UsersLayout({ children }: PropsWithChildren) {
 
                                 <li>
                                     <Link
-                                        href={route("user.employees.dashboard")}
+                                        href={route("bidding.all-list")}
                                         className={`flex items-center  p-2 my-2 w-full text-color-selections transition duration-75 rounded-xs ${ collapsed ? "pl-5" : "pl-11"} group ${
-                                            route().current("user.employees.dashboard")
+                                            route().current("bidding.all-list")
                                             ? "bg-slate-200 "
                                             : " hover:bg-slate-200/50"
                                         }`}
                                     >
-                                        <Contact  className="size-5 icon-color" />
-                                        {!collapsed && <span className="ms-3 text-sm">Employees</span>}
+                                        <FaList  className="size-4 icon-color" />
+                                        {!collapsed && <span className="ms-3 text-sm">All List</span>}
                                     </Link>
                                 </li>
 
-                                <li>
+                                {/* <li>
                                     <Link
-                                        href={route("user.suppliers.dashboard")}
+                                        href={route("user.suppliers.allList")}
                                         className={`flex items-center w-full p-2 my-2 text-color-selections transition duration-75 rounded-xs ${ collapsed ? "pl-5" : "pl-11"} group ${
                                             route().current("user.suppliers.dashboard")
                                             ? "bg-slate-200 "
@@ -351,37 +365,9 @@ export default function UsersLayout({ children }: PropsWithChildren) {
                                         <Forklift className="size-5 icon-color" />
                                         {!collapsed && <span className="ms-3 text-sm">Suppliers</span>}
                                     </Link>
-                                </li>
+                                </li> */}
 
-                                <hr />
-
-                                <li>
-                                    <Link
-                                        href={route("user.roles.dashboard")}
-                                        className={`flex items-center w-full p-2 my-2 text-color-selections transition duration-75 rounded-xs ${ collapsed ? "pl-5" : "pl-11"} group ${
-                                            route().current("user.roles.dashboard")
-                                            ? "bg-slate-200 "
-                                            : " hover:bg-slate-200/50"
-                                        }`}
-                                    >
-                                        <ShieldAlert className="size-5 icon-color" />
-                                        {!collapsed && <span className="ms-3 text-sm">Roles</span>}
-                                    </Link>
-                                </li>
-
-                                <li>
-                                    <Link
-                                        href={route("user.permissions.dashboard")}
-                                        className={`flex items-center w-full p-2 my-2 text-color-selections transition duration-75 rounded-xs ${ collapsed ? "pl-5" : "pl-11"} group ${
-                                            route().current("user.permissions.dashboard")
-                                            ? "bg-slate-200 "
-                                            : " hover:bg-slate-200/50"
-                                        }`}
-                                    >
-                                        <ShieldPlus className="size-5 icon-color" />
-                                        {!collapsed && <span className="ms-3 text-sm">Permissions</span>}
-                                    </Link>
-                                </li>
+                              
 
                             </ul>
                         </li>
@@ -454,84 +440,46 @@ export default function UsersLayout({ children }: PropsWithChildren) {
                                 aria-expanded={isOpen}
                             >
                                 <LuUser className="size-5" />
-                                    <>
-                                        <span className="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Visitor</span>
-                                        <svg
-                                            className={`w-3 h-3 transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
-                                            aria-hidden="true"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            fill="none"
-                                            viewBox="0 0 10 6"
-                                        >
-                                            <path
-                                                stroke="currentColor"
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth="2"
-                                                d="m1 1 4 4 4-4"
-                                            />
-                                        </svg>
-                                    </>
+
+                                <>
+                                    <span className="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Visitor</span>
+                                    <svg
+                                        className={`w-3 h-3 transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+                                        aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 10 6"
+                                    >
+                                        <path
+                                            stroke="currentColor"
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            strokeWidth="2"
+                                            d="m1 1 4 4 4-4"
+                                        />
+                                    </svg>
+                                </>
                             </button>
 
                             {/* Smooth Dropdown */}
                             <ul
                                 id="dropdown-example" className={`overflow-hidden transition-all duration-300 ease-in-out text-sm ${isOpen ? "max-h-full opacity-100" : "max-h-0 opacity-0"}`}
                             >
-                                <li>
-                                    <Link
-                                        href={route("user.employees.dashboard")}
-                                        className={`flex items-center  p-2 my-2 w-full text-gray-900 transition duration-75 rounded-md ${ collapsed ? "pl-5" : "pl-11"} group ${
-                                            route().current("visitors.dashboard")
-                                            ? "bg-green-800 text-white"
-                                            : "text-white hover:bg-green-800"
-                                        }`}
-                                    >
-                                        <IoPieChartSharp className="size-5" />
-                                        <span className="ms-3">Dashboard</span>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href={route("user.employees.dashboard")}
-                                        className={`flex items-center w-full p-2 my-2 text-gray-900 transition duration-75 rounded-md ${ collapsed ? "pl-5" : "pl-11"} group ${
-                                            route().current("visitors.index")
-                                            ? "bg-green-800 text-white"
-                                            : "text-white hover:bg-green-800"
-                                        }`}
-                                    >
-                                        <TbLayoutList className="size-5" />
-                                        <span className="ms-3">All List</span>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href={route("user.employees.dashboard")}
-                                        className={`flex items-center w-full p-2 my-2 text-gray-900 transition duration-75 rounded-md ${ collapsed ? "pl-5" : "pl-11"} group ${
-                                            route().current("visitors.approveTab")
-                                            ? "bg-green-800 text-white"
-                                            : "text-white hover:bg-green-800"
-                                        }`}
-                                    >
-                                        <FaRegCheckCircle className="size-5" />
-                                        <><span className="ms-3">To Approve</span></>
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        href={route("user.employees.dashboard")}
-                                        className={`flex items-center w-full p-2 my-2 text-gray-900 transition duration-75 rounded-md ${ collapsed ? "pl-5" : "pl-11"} group ${
-                                            route().current("visitors.completeTab")
-                                            ? "bg-green-800 text-white"
-                                            : "text-white hover:bg-green-800"
-                                        }`}
-                                    >
-                                        <FaRegCheckSquare className="size-5" />
 
-                                        <> <span className="ms-3">To Complete</span></>
-
+                                <li>
+                                    <Link
+                                        href={route("bidding.all-list")}
+                                        className={`flex items-center  p-2 my-2 w-full text-color-selections transition duration-75 rounded-xs ${ collapsed ? "pl-5" : "pl-11"} group ${
+                                            route().current("bidding.all-list")
+                                            ? "bg-slate-200 "
+                                            : " hover:bg-slate-200/50"
+                                        }`}
+                                    >
+                                        <Contact  className="size-5 icon-color" />
+                                        {!collapsed && <span className="ms-3 text-sm">All List</span>}
                                     </Link>
                                 </li>
+                                
                             </ul>
                         </li>
                     </ul>

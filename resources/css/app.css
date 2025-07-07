@@ -183,11 +183,11 @@
         @apply bg-green-700 hover:bg-green-600 transition-colors text-white px-6 text-sm py-1 rounded cursor-pointer;
     }
     /* Employee */
-    .input-field-employee-class{
+    .input-field-bidding-class{
         @apply border rounded-xs h-8 border-gray-300 w-full p-1 text-sm text-slate-700 disabled:bg-slate-200/80 disabled:cursor-not-allowed;
     }
 
-    .label-employee-class{
+    .label-bidding-class{
         @apply font-bold text-gray-600;
     }
 

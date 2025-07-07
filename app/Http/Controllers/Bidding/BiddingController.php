@@ -28,7 +28,7 @@ class BiddingController extends Controller
     public function alllist()
     {
 
-        return Inertia::render('bidding/bidding-all-list.tsx', [
+        return Inertia::render('bidding/bidding-all-list', [
             'role_permission_lists' => "test"
         ]);
 
@@ -47,7 +47,9 @@ class BiddingController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('bidding/bidding-create', [
+            'bid_event_id' => 2025070001
+        ]);
     }
 
     /**

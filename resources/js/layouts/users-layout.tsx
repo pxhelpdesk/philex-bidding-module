@@ -17,6 +17,8 @@ import { PiSquaresFourFill } from "react-icons/pi";
 
 import { LuUser } from "react-icons/lu";
 import { RiAuctionFill } from "react-icons/ri";
+import { FaChartSimple } from "react-icons/fa6";
+
 import { TbLayoutList } from "react-icons/tb";
 import { IoIosNotifications } from "react-icons/io";
 import { GrHide } from "react-icons/gr";
@@ -295,8 +297,8 @@ export default function UsersLayout({ children }: PropsWithChildren) {
 
                         <li>
                     
-                            <Link href={route("bidding.dashboard")} className="flex items-center px-2 py-1 rounded-xs hover:bg-slate-200/50  transition-colors group">
-                                <FaHome className='size-5 icon-color' />
+                            <Link href={route("bidding.dashboard")} className={`flex items-center px-2 py-1 rounded-xs hover:bg-slate-200/50  transition-colors group ${route().current("bidding.dashboard") ? "bg-slate-200" : ""}`}>
+                                <FaChartSimple className='size-5 icon-color' />
                                 {!collapsed && <span className="ml-3 text-sm py-1 text-color-selections">Dashboard</span>}
                             </Link>
                             

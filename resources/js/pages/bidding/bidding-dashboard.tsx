@@ -4,13 +4,13 @@ import React from 'react'
 
 const BiddingDashboard = () => {
     return (
-       <>
-            <Head title='Bidding - Dashboard '/>
+      <>
+        <Head title='Bidding - Dashboard '/>
 
-            <UsersLayout>
-              Reports
-            </UsersLayout>
-        </>
+        <UsersLayout>
+          Reports
+        </UsersLayout>
+      </>
     )
 }
 

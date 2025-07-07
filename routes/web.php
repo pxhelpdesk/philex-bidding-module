@@ -14,7 +14,7 @@ Route::prefix('/bidding')->middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [BiddingController::class, 'dashboard'])->name('bidding.dashboard');
 
     Route::get('/all-list', [BiddingController::class, 'alllist'])->name('bidding.all-list');
-    Route::get('/create', [BiddingController::class, 'dashboard'])->name('bidding.create');
+    Route::get('/create', [BiddingController::class, 'create'])->name('bidding.create');
 
 });
 

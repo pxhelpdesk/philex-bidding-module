@@ -13,6 +13,21 @@
 
 ## 📝 Changelog
 
+# 🚀 Version: `0.2.0-pre-alpha`
+📅 **Date:** July 7, 2025  
+
+## 📄 Description
+- 🧾 Added new inputs for **Bid Event Create** form  
+- 🧭 Added `Breadcrumbs` component  
+- 🏷️ Added `HeaderTitle` component  
+- 🌐 Added web route for bid creation  
+- 📦 Installed DataTable-related npm packages  
+- 🛠️ Updated database configuration  
+- ⚙️ Updated `.env.example` file  
+- 🎨 Renamed class names in `app.css` 
+
+---
+
 # 🚀 Version: `0.1.1-pre-alpha`
 📅 **Date:** July 4, 2025  
 

@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'default' => env('DB_USER_CONNECTION', 'sqlsrv_user'),
+    'default' => env('DB_USER_SQLSRV_CONNECTION', 'sqlsrv_user'),
 
     /*
     |--------------------------------------------------------------------------
@@ -97,48 +97,66 @@ return [
             'sslmode' => 'prefer',
         ],
 
-        'sqlsrv' => [
+        # Main SQL Server Connection - BIDDING
+        'sqlsrv_bidding' => [
             'driver' => 'sqlsrv',
             'url' => env('DB_URL'),
-            'host' => env('DB_HOST', 'localhost'),
-            'port' => env('DB_PORT', '1433'),
-            'database' => env('DB_DATABASE', 'laravel'),
-            'username' => env('DB_USERNAME', 'root'),
-            'password' => env('DB_PASSWORD', ''),
-            'charset' => env('DB_CHARSET', 'utf8'),
+            'host' => env('DB_BIDDING_SQLSRV_HOST', 'localhost'),
+            'port' => env('DB_BIDDING_SQLSRV_PORT', '1433'),
+            'database' => env('DB_BIDDING_SQLSRV_DATABASE', 'laravel'),
+            'username' => env('DB_BIDDING_SQLSRV_USERNAME', 'root'),
+            'password' => env('DB_BIDDING_SQLSRV_PASSWORD', ''),
+            'charset' => env('DB_BIDDING_SQLSRV_CHARSET', 'utf8'),
             'prefix' => '',
             'prefix_indexes' => true,
             // 'encrypt' => env('DB_ENCRYPT', 'yes'),
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
 
-        # Custom Server Connection
+        # External Server Connection ( Don't use this as `default` connection )
+        # PADCAL SQL Server Connection - MMD_dev
+        'sqlsrv_mmd_dev' => [
+            'driver' => 'sqlsrv',
+            'url' => env('DATABASE_URL'),
+            'host' => env('DB_PADCAL_SQLSRV_HOST', '172.16.0.2\SQL2005'),
+            'port' => env('DB_PADCAL_SQLSRV_PORT', '1433'),
+            'database' => env('DB_PADCAL_SQLSRV_DATABASE', 'MMD_dev'),
+            'username' => env('DB_PADCAL_SQLSRV_USERNAME', 'Bid_User'),
+            'password' => env('DB_PADCAL_SQLSRV_PASSWORD', 'B!dd1ng'),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'prefix_indexes' => true,
+          
+        ],
+
+        # User SQL Server Connection - User Module
         'sqlsrv_user' => [
             'driver' => 'sqlsrv',
             'url' => env('DB_USER_URL'),
-            'host' => env('DB_USER_HOST', 'localhost'),
-            'port' => env('DB_USER_PORT', '1433'),
-            'database' => env('DB_USER_DATABASE', 'db_user_module'),
-            'username' => env('DB_USER_USERNAME', ''),
-            'password' => env('DB_USER_PASSWORD', ''),
-            'charset' => env('DB_USER_CHARSET', 'utf8'),
+            'host' => env('DB_USER_SQLSRV_HOST', 'localhost'),
+            'port' => env('DB_USER_SQLSRV_PORT', '1433'),
+            'database' => env('DB_USER_SQLSRV_DATABASE', 'db_user_module'),
+            'username' => env('DB_USER_SQLSRV_USERNAME', ''),
+            'password' => env('DB_USER_SQLSRV_PASSWORD', ''),
+            'charset' => env('DB_USER_SQLSRV_CHARSET', 'utf8'),
             'prefix' => '',
             'prefix_indexes' => true,
             // 'encrypt' => env('DB_ENCRYPT', 'yes'),
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
 
+        # OLD BIDDING Data Source MySQL Connection
         'mysql_old_bidding' => [
             'driver' => 'mysql',
             'url' => env('DB_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'laravel'),
-            'username' => env('DB_USERNAME', 'root'),
-            'password' => env('DB_PASSWORD', ''),
-            'unix_socket' => env('DB_SOCKET', ''),
-            'charset' => env('DB_CHARSET', 'utf8mb4'),
-            'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
+            'host' => env('DB_OLD_BIDDING_HOST', '127.0.0.1'),
+            'port' => env('DB_OLD_BIDDING_PORT', '3306'),
+            'database' => env('DB_OLD_BIDDING_DATABASE', 'laravel'),
+            'username' => env('DB_OLD_BIDDING_USERNAME', 'root'),
+            'password' => env('DB_OLD_BIDDING_PASSWORD', ''),
+            'unix_socket' => env('DB_OLD_BIDDING_SOCKET', ''),
+            'charset' => env('DB_OLD_BIDDING_CHARSET', 'utf8mb4'),
+            'collation' => env('DB_OLD_BIDDING_COLLATION', 'utf8mb4_unicode_ci'),
             'prefix' => '',
             'prefix_indexes' => true,
             'strict' => true,

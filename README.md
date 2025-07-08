@@ -13,6 +13,20 @@
 
 ## 📝 Changelog
 
+# 🚀 Version: `0.3.0-pre-alpha`
+📅 **Date:** July 2, 2025  
+
+## 📄 Description
+- 📦 Added 5 models for bidding data fetch  
+- 🔌 Added API fetch logic for **Abstract Number**  
+- 🧩 Added missing columns in `User` model's `$fillable`  
+- 🎨 Added preset utility classes in `app.css`  
+- 🧱 Added UI sections in the **Create Bidding** page  
+- 🌐 Added web routes for API fetch endpoints  
+- ⬆️ Updated npm packages  
+
+---
+
 # 🚀 Version: `0.2.0-pre-alpha`
 📅 **Date:** July 7, 2025  
 

@@ -16,6 +16,11 @@ Route::prefix('/bidding')->middleware(['auth', 'verified'])->group(function () {
     Route::get('/all-list', [BiddingController::class, 'alllist'])->name('bidding.all-list');
     Route::get('/create', [BiddingController::class, 'create'])->name('bidding.create');
 
+     //Supplier API
+    Route::prefix('/api')->as('bidding.')->group(function () {
+        Route::get('/create-search-abstract', [BiddingController::class, 'getSearchAbstractDataAPI'])->name('search');
+    });
+
 });
 
 require __DIR__.'/settings.php';

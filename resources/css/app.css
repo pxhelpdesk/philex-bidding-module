@@ -182,9 +182,14 @@
     .form-submit-btn-class{
         @apply bg-green-700 hover:bg-green-600 transition-colors text-white px-6 text-sm py-1 rounded cursor-pointer;
     }
-    /* Employee */
+
+    /* Bidding */
     .input-field-bidding-class{
         @apply border rounded-xs h-8 border-gray-300 w-full p-1 text-sm text-slate-700 disabled:bg-slate-200/80 disabled:cursor-not-allowed;
+    }
+
+     .textarea-field-bidding-class{
+        @apply border rounded-xs border-gray-300 w-full p-1 text-sm text-slate-700 disabled:bg-slate-200/80 disabled:cursor-not-allowed;
     }
 
     .label-bidding-class{
@@ -195,13 +200,14 @@
         @apply flex gap-1 items-center cursor-pointer hover:text-yellow-700 w-20 my-2;
     }
 
-    /* Roles */
-    .input-field-role-class{
-        @apply border rounded-xs h-8 border-gray-300 w-full p-1 text-sm text-slate-700;
+    .header-title-label-class{
+        @apply text-base font-bold text-center text-white;
     }
 
-    .input-checkbox-role-class{
-        @apply border rounded-xs h-6 w-6 m-1 border-gray-300 p-2 text-sm text-slate-700;
+    .header-background-label-class{
+        @apply w-auto p-3 m-4 shadow-md rounded-sm bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-600 items-center;
     }
+
+   
 
 }

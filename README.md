@@ -6,15 +6,25 @@
 |-------------|--------------|-------------------------------|
 | Pre-Alpha   | July 1, 2025 | Initial setup and core layout |
 | Alpha       | TBA          | Internal testing phase        |
-| Beta        | TBA          | Public testing and feedback   |
+| Beta        | TBA          | Public testing                |
 | Release     | TBA          | Full launch                   |
 
 ---
 
 ## 📝 Changelog
 
+# 🚀 Version: `0.3.1-pre-alpha`
+📅 **Date:** July 9, 2025  
+
+## 📄 Description
+- 🌐 Added `.api` namespace in web routes  
+- 🖼️ Updated favicon and SVG icon to Philex branding  
+- 📝 Updated `README.md`  
+
+---
+
 # 🚀 Version: `0.3.0-pre-alpha`
-📅 **Date:** July 2, 2025  
+📅 **Date:** July 8, 2025  
 
 ## 📄 Description
 - 📦 Added 5 models for bidding data fetch  
